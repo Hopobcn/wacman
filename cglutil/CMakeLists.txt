@@ -19,7 +19,6 @@ target_sources(
 
     PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/src/cglutil.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/src/stb_image.h
     ${CMAKE_CURRENT_LIST_DIR}/src/implementations.cpp
 )
 
@@ -27,9 +26,10 @@ target_sources(
 target_link_libraries(
     ${CGL_UTIL_NAME}
     PRIVATE
-    glad
-    OpenGL::GL
-    glfw
+    glad::glad
+    opengl::opengl
+    glfw::glfw
+    stb::stb
     $<IF:$<CXX_COMPILER_ID:GNU>,stdc++fs,> # GCC requires manual fs link
 )
 

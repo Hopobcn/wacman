@@ -14,7 +14,7 @@
 
 #include <gfx.h>
 #include <cglutil.h>
-#include <imgui/imgui.h>
+#include <imgui.h>
 #include <glm/vec2.hpp>
 #include <glm/vec3.hpp>
 #include <entt/meta/factory.hpp>

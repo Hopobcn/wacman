@@ -8,7 +8,7 @@
 #include <algorithm>
 
 #include <cglutil.h>
-#include <imgui/imgui.h>
+#include <imgui.h>
 
 namespace pac
 {

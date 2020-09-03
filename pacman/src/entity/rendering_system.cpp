@@ -4,7 +4,7 @@
 #include "rendering/renderer.h"
 
 #include <gfx.h>
-#include <imgui/imgui.h>
+#include <imgui.h>
 #include <entt/entity/registry.hpp>
 
 namespace pac

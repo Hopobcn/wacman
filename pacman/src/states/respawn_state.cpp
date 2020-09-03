@@ -2,7 +2,7 @@
 #include "state_manager.h"
 #include "config.h"
 
-#include <imgui/imgui.h>
+#include <imgui.h>
 #include <GLFW/glfw3.h>
 
 namespace pac

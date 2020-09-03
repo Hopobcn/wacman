@@ -1,7 +1,6 @@
 target_sources(
     ${EXEC_NAME}
     PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/stb_image.h
     
     ${CMAKE_CURRENT_LIST_DIR}/renderer.h
     ${CMAKE_CURRENT_LIST_DIR}/renderer.cpp

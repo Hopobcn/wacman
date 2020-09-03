@@ -12,7 +12,7 @@
 
 #include <GLFW/glfw3.h>
 #include <glm/gtc/type_ptr.hpp>
-#include <imgui/imgui.h>
+#include <imgui.h>
 #include <entt/signal/dispatcher.hpp>
 #include <entt/meta/factory.hpp>
 

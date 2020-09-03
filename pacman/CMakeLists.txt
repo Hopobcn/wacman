@@ -4,11 +4,6 @@
 set(EXEC_NAME pacman)
 add_executable(${EXEC_NAME} ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp)
 
-# Discover and link required libraries
-find_package(OpenGL REQUIRED)
-find_package(OpenAL REQUIRED)
-find_package(Lua REQUIRED)
-
 target_link_libraries(
     ${EXEC_NAME}
     PRIVATE
@@ -16,16 +11,17 @@ target_link_libraries(
     # $<$<AND:$<CXX_COMPILER_ID:GNU>,$<CONFIG:Debug>>:asan>
 
     $<$<PLATFORM_ID:Linux>:dl>                  # Required by glad on Linux
-    ${OPENAL_LIBRARY}                           # For OpenAL Audio
-    OpenGL::GL                                  # For OpenGL
+    OpenAL::OpenAL                              # For OpenAL Audio
     glad::glad                                  # OpenGL Loader
     gfx::gfx                                    # Logging mostly
     EnTT::EnTT                                  # ECS
-    glfw                                        # For window integration
-    glm                                         # For Maths
+    glfw::glfw                                  # For window integration
+    glm::glm                                    # For Maths
     cgl                                         # OpenGL utilities (custom library built in-source for this project)
-    lua                                         # Sol2 Needs this
     sol2::sol2                                  # Lua Bindings
+    stb::stb                                    # stb_image.h
+    imgui::imgui
+    imgui::imgui-bindings
 )
 
 # Add this so it can specify source files and include directories local to it's own directory

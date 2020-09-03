@@ -40,7 +40,6 @@ configure_file(
 include(${CMAKE_CURRENT_LIST_DIR}/audio/CMakeLists.txt)
 include(${CMAKE_CURRENT_LIST_DIR}/encrypt/CMakeLists.txt)
 include(${CMAKE_CURRENT_LIST_DIR}/entity/CMakeLists.txt)
-include(${CMAKE_CURRENT_LIST_DIR}/imgui/CMakeLists.txt)
 include(${CMAKE_CURRENT_LIST_DIR}/input/CMakeLists.txt)
 include(${CMAKE_CURRENT_LIST_DIR}/rendering/CMakeLists.txt)
 include(${CMAKE_CURRENT_LIST_DIR}/robinhood/CMakeLists.txt)

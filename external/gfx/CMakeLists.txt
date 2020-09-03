@@ -23,5 +23,6 @@ target_include_directories(
     ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
+
 # GFX Depends privately on glad to build
-target_link_libraries(gfx PRIVATE glad)
+target_link_libraries(gfx PRIVATE glad::glad)

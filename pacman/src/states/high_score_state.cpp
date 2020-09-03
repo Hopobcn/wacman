@@ -5,7 +5,7 @@
 
 #include <fstream>
 
-#include <imgui/imgui.h>
+#include <imgui.h>
 #include <GLFW/glfw3.h>
 
 namespace pac

@@ -4,7 +4,7 @@
 #include <gfx.h>
 #include <glm/vec2.hpp>
 #include <GLFW/glfw3.h>
-#include <imgui/imgui.h>
+#include <imgui.h>
 
 namespace pac
 {

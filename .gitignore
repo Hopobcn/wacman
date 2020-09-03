@@ -1,8 +1,12 @@
 # Gitignore for IMT2531_assignment1 - Project Pacman
 build/
+cmake-build-*
+external/imgui/imgui_impl_*
 
 # Ignore VS Code preferences
 .vscode/
+
+.idea
 
 # QtCreator IDE specific file - no need to replicate
 CMakeLists.txt.user
