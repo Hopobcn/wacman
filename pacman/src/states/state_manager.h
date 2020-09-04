@@ -57,7 +57,7 @@ public:
      * \brief empty checks if the state stack is empty
      * \return true if the state stack is empty
      */
-    bool empty() const;
+    [[nodiscard]] bool empty() const;
 
     /*!
      * \brief clear clears the state stack of all states
@@ -85,6 +85,6 @@ public:
      * \return nullptr if no active state, otherwise a non-owning pointer to the active state. Don't store it
      * after a pop, as it will be invalid.
      */
-    State* get_active_state() const;
+    [[nodiscard]] State* get_active_state() const;
 };
 }  // namespace pac

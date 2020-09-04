@@ -20,10 +20,10 @@ public:
     /*!
      * \brief Construct a Vignere Encryptor using this as the "pass-key"
      */
-    VignereEncryption(const char* key);
+    explicit VignereEncryption(const char* key);
 
-    virtual void encrypt(std::string& str) override;
+    void encrypt(std::string& str) override;
 
-    virtual void decrypt(std::string& str) override;
+    void decrypt(std::string& str) override;
 };
 }  // namespace pac

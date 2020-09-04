@@ -236,6 +236,7 @@ GLuint make_shader_program(const std::vector<ShaderStage>& stages)
     std::vector<unsigned> shaders = {};
 
     /* Compile all shaders and put them in the shader array */
+    shaders.reserve(stages.size());
     for (const auto& stage : stages)
     {
         shaders.emplace_back(fcompile_shader(stage.sourcePath, stage.stage));

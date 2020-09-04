@@ -41,7 +41,7 @@ PostProcessor::~PostProcessor()
     glDeleteTextures(1, &m_framebuffer.texture);
 }
 
-void PostProcessor::capture()
+void PostProcessor::capture() const
 {
     glBindFramebuffer(GL_DRAW_FRAMEBUFFER, m_framebuffer.framebuffer);
     glClear(GL_COLOR_BUFFER_BIT);

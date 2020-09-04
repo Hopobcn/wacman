@@ -15,7 +15,7 @@ private:
     std::vector<Action> m_unprocessed_actions{};
 
 public:
-    InputSystem(entt::registry& reg);
+    explicit InputSystem(entt::registry& reg);
 
     ~InputSystem() noexcept override;
 

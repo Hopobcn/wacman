@@ -33,11 +33,11 @@ VertexArray& VertexArray::operator=(VertexArray&& other) noexcept
 
 VertexArray::~VertexArray() noexcept { glDeleteVertexArrays(1, &m_name); }
 
-void VertexArray::bind() { glBindVertexArray(m_name); }
+void VertexArray::bind() const { glBindVertexArray(m_name); }
 
 pac::VertexArray::operator unsigned() { return m_name; }
 
-void VertexArray::set_attribute(const VertexArray::Attribute& attr)
+void VertexArray::set_attribute(const VertexArray::Attribute& attr) const
 {
     /* If it is an integral attribute, use correct AttribIFormat */
     switch (attr.type)

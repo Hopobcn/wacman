@@ -31,7 +31,7 @@ public:
      * \param shader_stages is a vector of ShaderStages, which contain a shader type, and a file path. This ctor can not
      * construct from in memory shader source code.
      */
-    explicit ShaderProgram(const std::vector<cgl::ShaderStage> shader_stages);
+    explicit ShaderProgram(const std::vector<cgl::ShaderStage>& shader_stages);
     ShaderProgram(const ShaderProgram&) = delete;
     ShaderProgram& operator=(const ShaderProgram) = delete;
     ShaderProgram(ShaderProgram&& other) noexcept;

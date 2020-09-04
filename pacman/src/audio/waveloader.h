@@ -69,7 +69,7 @@ private:
     detail::HeaderData m_data;
 
 public:
-    WaveFile(const std::string& filepath) { loadFromFile(filepath.c_str()); }
+    explicit WaveFile(const std::string& filepath) { loadFromFile(filepath.c_str()); }
 
     /*!
      * \brief loadFromFile loads a new wave file from file.
@@ -92,7 +92,7 @@ public:
         fread(&riff, sizeof riff, 1, f);
 
         /* Local storage to check for completion, and reading next header */
-        detail::Header next_header;
+        detail::Header next_header{};
         bool b_fmt{false}, b_data{false};
 
         do
@@ -127,19 +127,19 @@ public:
      * \brief data returns the raw waveform data
      * \return the waveform data
      */
-    const uint8_t* data() const { return m_data.data(); }
+    [[nodiscard]] const uint8_t* data() const { return m_data.data(); }
 
     /*!
      * \brief size retuns the data size in bytes
      * \return the size of the wave data in bytes
      */
-    size_t size() const { return m_data.size(); }
+    [[nodiscard]] size_t size() const { return m_data.size(); }
 
     /*!
      * \brief frequency gets the frequency of the wave file
      * \return the frequency
      */
-    uint32_t frequency() const { return m_fmt.sample_rate; }
+    [[nodiscard]] uint32_t frequency() const { return m_fmt.sample_rate; }
 
     /*!
      * \brief getALformat gets one of the four supported OpenAL formats. STEREO16, MONO16, STEREO8 and MONO8
@@ -148,7 +148,7 @@ public:
      * are enabled. Otherwise it will return 0 if the format is not known!
      * \return An OpenAL enum representing the format in a way OpenAL understands
      */
-    ALenum getALformat() const
+    [[nodiscard]] ALenum getALformat() const
     {
         if (m_fmt.num_channels == 2 && m_fmt.bits_per_sample == 16)
         {
@@ -175,7 +175,7 @@ public:
      * \note Remember that it is the caller's responsibility to delete the buffer using alDeleteBuffers!
      * \return A handle to the newly created OpenAL buffer
      */
-    ALuint createOpenalBuffer() const
+    [[nodiscard]] ALuint createOpenalBuffer() const
     {
         uint32_t buf;
         alGenBuffers(1, &buf);

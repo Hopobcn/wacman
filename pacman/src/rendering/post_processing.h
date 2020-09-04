@@ -44,7 +44,7 @@ public:
      * \brief capture begins capturing image information from any draw calls that are drawn. Call this before you draw anything
      * that you want to apply processing to
      */
-    void capture();
+    void capture() const;
 
     /*!
      * \brief process stops capturing and does the post processing work on all previously captured draw calls. Call this after you

@@ -46,7 +46,7 @@ public:
      * \brief stop stops a currently playing sound if it is still playing
      * \param sound_id_from_play is the id of the sound you want to stop that play returned to you
      */
-    void stop(unsigned sound_id_from_play);
+    static void stop(unsigned sound_id_from_play);
 
     ~SoundManager();
 

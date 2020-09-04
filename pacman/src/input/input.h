@@ -84,7 +84,7 @@ public:
      * \brief InputState
      * \param blocking if this state should block other states
      */
-    InputDomain(bool blocking) : m_blocking(blocking){};
+    explicit InputDomain(bool blocking) : m_blocking(blocking) {};
 
     /*!
      * \brief bind_key sets an action to be performed when the given key is pressed
@@ -117,7 +117,7 @@ public:
      * \brief blocking
      * \return true if state is blocking
      */
-    bool blocking() const;
+    [[nodiscard]] bool blocking() const;
 };
 
 /*!
@@ -149,7 +149,7 @@ private:
         ECommandType command_type = ECommandType::Nothing;
 
         /* So we can emplace back */
-        Command(ECommandType type) : command_type(type) {}
+        explicit Command(ECommandType type) : command_type(type) {}
 
         Command(InputDomain&& state, ECommandType type) : new_state(std::move(state)), command_type(type) {}
     };
@@ -201,7 +201,7 @@ public:
     /*!
      * \brief get_cursor_position gets the current cursor position
      */
-    const glm::dvec2& get_cursor_position() const;
+    [[nodiscard]] const glm::dvec2& get_cursor_position() const;
 
 private:
     /* Private CTOR since we only want one InputManager */

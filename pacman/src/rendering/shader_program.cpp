@@ -5,7 +5,7 @@
 
 namespace pac
 {
-ShaderProgram::ShaderProgram(const std::vector<cgl::ShaderStage> shader_stages)
+ShaderProgram::ShaderProgram(const std::vector<cgl::ShaderStage>& shader_stages)
 {
     m_name = cgl::make_shader_program(shader_stages);
 }

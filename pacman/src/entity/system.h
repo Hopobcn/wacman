@@ -15,7 +15,7 @@ protected:
     entt::registry& m_reg;
 
 public:
-    System(entt::registry& reg) : m_reg(reg){};
+    explicit System(entt::registry& reg) : m_reg(reg) {};
     System(const System&) = default;
     System(System&&) = default;
     System& operator=(System&&) = delete;

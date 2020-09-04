@@ -42,7 +42,7 @@ private:
         {"Input", [this](sol::state_view& s, const sol::table& t, entt::entity e) { make_input_component(s, t, e); }}};
 
 public:
-    EntityFactory(entt::registry& registry);
+    explicit EntityFactory(entt::registry& registry);
 
     /*!
      * \brief spawn spawns a new entity from a resource file
@@ -58,7 +58,7 @@ private:
      * \param name is the name of the entity to look for
      * \return the path if any
      */
-    std::optional<std::filesystem::path> find_entity_path(const std::string& name);
+    static std::optional<std::filesystem::path> find_entity_path(const std::string& name);
 
     /* Factory functions for each component type */
     void make_sprite_component(sol::state_view& state, const sol::table& comp, entt::entity e);

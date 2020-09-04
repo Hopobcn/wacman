@@ -21,6 +21,6 @@ public:
     void update(float dt) override;
 
 private:
-    void update_animation(glm::ivec2 new_direction, CAnimationSprite& anim);
+    static void update_animation(glm::ivec2 new_direction, CAnimationSprite& anim);
 };
 }  // namespace pac

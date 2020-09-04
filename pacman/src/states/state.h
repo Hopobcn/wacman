@@ -28,7 +28,7 @@ protected:
 public:
     State() = default;
 
-    State(GameContext owner) : m_context(owner) {}
+    explicit State(GameContext owner) : m_context(owner) {}
 
     State(const State&) = delete;
 

@@ -35,7 +35,7 @@ private:
      * \param reg is the registry
      * \return player position
      */
-    glm::ivec2 get_player_pos() const;
+    [[nodiscard]] glm::ivec2 get_player_pos() const;
 
     void pathfind(const CPosition& pos, const glm::ivec2& ai_dir, const glm::ivec2& plr_pos, CAI& ai);
 };

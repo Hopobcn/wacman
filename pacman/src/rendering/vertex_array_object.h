@@ -16,19 +16,19 @@ public:
     struct Attribute
     {
         /* Attribute location, specified in shader layout qualifier */
-        unsigned location;
+        unsigned location{};
 
         /* Buffer binding point to assosciate with attribute location */
-        unsigned binding;
+        unsigned binding{};
 
         /* Number of components (1-4) for the attribute */
-        int components;
+        int components{};
 
         /* Type of component (GL_FLOAT, GL_UNSIGNED, etc.) */
-        unsigned type;
+        unsigned type{};
 
         /* Offset from start of Vertex */
-        unsigned offset;
+        unsigned offset{};
 
         /* If this is non-zero, it the attribute is per_instance, and not per_vertex */
         unsigned instance_divisor = 0u;
@@ -42,9 +42,9 @@ public:
 
     operator unsigned();
 
-    void bind();
+    void bind() const;
 
 private:
-    void set_attribute(const Attribute& attr);
+    void set_attribute(const Attribute& attr) const;
 };
 }  // namespace pac
