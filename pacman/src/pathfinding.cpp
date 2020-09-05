@@ -1,13 +1,13 @@
 #include "pathfinding.h"
 #include "level.h"
 #include "common.h"
-#include "robinhood/robinhood.h"
 
 #include <queue>
 #include <vector>
 #include <type_traits>
 
 #include <gfx.h>
+#include <robin_hood.h>
 
 pac::Path::Path(const pac::Level& graph, glm::ivec2 origin, glm::ivec2 target, ASTAR astartag)
     : m_creation_time(std::chrono::steady_clock::now())

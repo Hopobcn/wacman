@@ -9,7 +9,7 @@
 
 #include <glm/vec2.hpp>
 #include <sol/function.hpp>
-#include <robinhood/robinhood.h>
+#include <robin_hood.h>
 
 namespace pac
 {

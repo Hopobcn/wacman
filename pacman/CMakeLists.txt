@@ -22,6 +22,7 @@ target_link_libraries(
     stb::stb                                    # stb_image.h
     imgui::imgui
     imgui::imgui-bindings
+    robin_hood::robin_hood
 )
 
 # Add this so it can specify source files and include directories local to it's own directory

@@ -12,7 +12,7 @@
 #include <cstdint>
 #include <vector>
 
-#include <robinhood/robinhood.h>
+#include <robin_hood.h>
 
 namespace pac
 {

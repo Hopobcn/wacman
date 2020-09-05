@@ -8,7 +8,7 @@
 #include <cstdint>
 #include <string_view>
 
-#include <robinhood/robinhood.h>
+#include <robin_hood.h>
 #include <sol/state_view.hpp>
 #include <entt/entity/registry.hpp>
 

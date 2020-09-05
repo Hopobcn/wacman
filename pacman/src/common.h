@@ -9,7 +9,7 @@
 #include <sol/state.hpp>
 #include <entt/entity/registry.hpp>
 #include <entt/signal/dispatcher.hpp>
-#include <robinhood/robinhood.h>
+#include <robin_hood.h>
 
 namespace pac
 {

@@ -13,7 +13,7 @@
 #include <glm/vec2.hpp>
 #include <sol/state.hpp>
 #include <entt/entity/registry.hpp>
-#include <robinhood/robinhood.h>
+#include <robin_hood.h>
 
 namespace pac
 {

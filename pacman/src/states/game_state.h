@@ -11,7 +11,7 @@
 #include <memory>
 #include <string_view>
 
-#include <robinhood/robinhood.h>
+#include <robin_hood.h>
 
 namespace pac
 {

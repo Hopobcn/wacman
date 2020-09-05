@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-#include "robinhood/robinhood.h"
+#include <robin_hood.h>
 
 /* Forward Declarations */
 typedef struct ALCcontext_struct ALCcontext;

@@ -17,6 +17,7 @@ find_package(glfw REQUIRED)
 find_package(glm REQUIRED)
 find_package(sol2 REQUIRED)
 find_package(stb REQUIRED)
+find_package(robin_hood REQUIRED)
 
 add_subdirectory(cglutil)
 add_subdirectory(external)

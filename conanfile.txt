@@ -1,11 +1,12 @@
 [requires]
 entt/3.2.2
-imgui/1.74
-sol2/3.0.3
 glad/0.1.33
 glfw/3.3.2
 glm/0.9.9.8
+imgui/1.74
 openal/1.19.1
+robin-hood-hashing/3.7.0
+sol2/3.0.3
 stb/20200203
 
 [options]

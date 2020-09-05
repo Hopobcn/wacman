@@ -10,7 +10,7 @@
 #include <functional>
 
 #include <entt/signal/dispatcher.hpp>
-#include <robinhood/robinhood.h>
+#include <robin_hood.h>
 #include <glm/vec2.hpp>
 
 /* Forward declare to avoid including glfw.h in this file */

@@ -43,7 +43,7 @@ entt::entity EntityFactory::spawn(sol::state_view& state, const std::string& nam
         const auto& key = k.first.as<std::string>();
         if (auto fn = m_component_map.find(key); fn != m_component_map.end())
         {
-            fn->getSecond()(state, component, e);
+            fn->second(state, component, e);
         }
     }
 

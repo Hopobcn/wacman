@@ -10,7 +10,7 @@
 
 #include <gfx.h>
 #include <cglutil.h>
-#include <robinhood/robinhood.h>
+#include <robin_hood.h>
 #include <sol/state_view.hpp>
 #include <entt/entity/registry.hpp>
 #include <entt/signal/delegate.hpp>
